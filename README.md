@@ -1,1 +1,0 @@
-# meteoapp-javascript-project

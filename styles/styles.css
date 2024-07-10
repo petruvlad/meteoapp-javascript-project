@@ -1,0 +1,136 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:transparent;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    align-items: center;
+}
+
+#search-button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color:transparent;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+#search-button .fa-search {
+    color: #333;
+}
+
+.recent-cities {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+/* Stilizare pentru secțiunile principale */
+#current-weather, #weather-animation, #five-day-forecast {
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilizare pentru animația meteo */
+.weather-animation-frame {
+    width: 100%;
+    height: 300px;
+    border: none;
+   background-color: transparent;
+   
+
+}
+
+/* Stilizare pentru fiecare element din prognoza pe 5 zile */
+.forecast-item {
+    background-color:transparent;
+    padding: 10px;
+    margin-top: 10px;
+   
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #87ceeb;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#buttons button:hover {
+    background-color: #00bfff;
+}
+
+#weather-chart {
+    max-width: 100%;
+    margin-top: 20px;
+   
+}
+
+/* Stilizare pentru secțiunea de citat motivațional */
+#quote {
+  margin: 20px;
+  padding: 20px;
+ 
+  background-color:transparent;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+
+#quote blockquote {
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+  color:#fff;
+}
+
+#date {
+  text-align: center; /* Afișează textul în centru */
+  margin-top: 20px; /* Spațiu de sus */
+  padding: 10px; /* Spațiu intern */
+  background-color:transparent; /* Culoare fundal secțiune */
+  
+}
+
+#date p {
+  font-size: 18px; /* Mărime text */
+  font-weight: bold; /* Text bold */
+  color:#fff; /* Culoare text */
+  margin: 0; /* Elimină margini */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Caută oraș...">
+            <button id="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="recent-cities">
+            <!-- Orașe căutate recent -->
+        </div>
+    </header>
+    <main>
+        <section id="current-weather">
+            <!-- Datele meteo curente -->
+        </section>
+        <section id="weather-animation">
+            <!-- Animația meteo -->
+        </section>
+        <section id="hourly-forecast" style="display: none;">
+            <canvas id="hourly-forecast-chart"></canvas>
+        </section>
+        <section id="five-day-forecast" style="display: none;">
+            <canvas id="five-day-forecast-chart"></canvas>
+        </section>
+        <section id="buttons">
+            <button id="today-button">TODAY</button>
+            <button id="five-days-button">5 DAYS</button>
+        </section>
+        <section id="quote">
+            <!-- Citat motivațional -->
+        </section>
+        <section id="date">
+            <!-- Data curentă -->
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
+
