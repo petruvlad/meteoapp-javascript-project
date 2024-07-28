@@ -3,46 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body>
-    <header>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Caută oraș...">
-            <button id="search-button"><i class="fa fa-search"></i></button>
-        </div>
-        <div class="recent-cities">
-            <!-- Orașe căutate recent -->
-        </div>
-    </header>
-    <main>
-        <section id="current-weather">
-            <!-- Datele meteo curente -->
-        </section>
-        <section id="weather-animation">
-            <!-- Animația meteo -->
-        </section>
-        <section id="hourly-forecast" style="display: none;">
-            <canvas id="hourly-forecast-chart"></canvas>
-        </section>
-        <section id="five-day-forecast" style="display: none;">
-            <canvas id="five-day-forecast-chart"></canvas>
-        </section>
-        <section id="buttons">
-            <button id="today-button">TODAY</button>
-            <button id="five-days-button">5 DAYS</button>
-        </section>
-        <section id="quote">
-            <!-- Citat motivațional -->
-        </section>
-        <section id="date">
-            <!-- Data curentă -->
-        </section>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-6">Weather App</h1>
+        <form id="weatherForm" class="flex flex-col items-center mb-6 space-y-4">
+            <input type="text" id="cityInput" class="w-full max-w-xs p-2 border border-gray-300 rounded" placeholder="Enter city" required>
+            <div class="flex space-x-2">
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Get Weather</button>
+                <button type="button" id="toggleUnit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">°C/°F</button>
+                <button type="button" id="useLocation" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">Use My Location</button>
+                <button type="button" id="toggleTheme" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition">Toggle Theme</button>
+            </div>
+        </form>
+        <div id="weatherOutput" class="mb-4"></div>
+        <button type="button" id="toggle5Day" class="hidden px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">Show 5-Day Forecast</button>
+        <div id="fiveDayForecast" class="hidden mt-6 space-y-4"></div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
+
 
