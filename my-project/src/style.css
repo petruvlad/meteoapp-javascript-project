@@ -1,0 +1,243 @@
+/* 🔥 Fundal dinamic */
+body {
+  background: linear-gradient(to bottom, #3a1c71, #d76d77, #ffaf7b);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* 🌙 Dark Mode */
+.dark-mode {
+  background: linear-gradient(to bottom, #1e1e1e, #121212);
+  color: white;
+}
+
+/* 🌫️ Efect blur pentru containerul meteo */
+#weatherContainer {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.5s ease-in-out;
+}
+
+/* ☀️ Carduri meteo */
+.weather-card {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.weather-card:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* 🌙 Dark Mode pentru carduri */
+.dark-mode .weather-card {
+  background: rgba(30, 30, 30, 0.7);
+}
+
+.dark-mode .weather-card:hover {
+  background: rgba(50, 50, 50, 0.8);
+}
+
+/* 🔄 Animații pentru apariția cardurilor */
+.weather-card {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.weather-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🌡️ Iconițe animate */
+.icon {
+  font-size: 3rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  animation: bounce 1.5s infinite, rotate 6s infinite linear;
+}
+
+/* Efect de bounce */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Efect subtil de rotație */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 📊 Stilizare pentru grafic */
+#weatherChart {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.5s ease-in-out;
+}
+
+/* 📊 Dark mode pentru grafic */
+.dark-mode #weatherChart {
+  background: rgba(30, 30, 30, 0.5);
+}
+
+/* 🔘 Buton Dark Mode */
+.btn-dark-mode {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-dark-mode:hover {
+  background: #666;
+}
+
+/* 🌙 Dark Mode pentru butoane */
+.dark-mode .btn-dark-mode {
+  background: #222;
+}
+
+.dark-mode .btn-dark-mode:hover {
+  background: #444;
+}
+
+/* 🌍 Responsivitate generală */
+@media (max-width: 1200px) {
+  .weather-card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Fundal mai puțin intens pe ecrane mici */
+  body {
+    background-attachment: scroll;
+  }
+
+  /* Carduri mai compacte */
+  .weather-card {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Butoane mai mari pentru accesibilitate */
+  .btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Text mai mic pentru telefoane */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Cardurile meteo pe mobil */
+  .weather-card {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  /* Ajustare butoane */
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* Grafic meteo mai flexibil */
+  #weatherChart {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Cardurile meteo să se întindă pe toată lățimea */
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Design pentru ecrane foarte mici */
+  body {
+    font-size: 14px;
+  }
+
+  /* Cardurile să fie full-width pe telefon */
+  .col {
+    width: 100%;
+  }
+
+  /* Diminuăm padding-ul pentru elemente */
+  .weather-card {
+    padding: 6px;
+  }
+
+  /* Butoane mai mari pentru accesibilitate */
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* Mărime text pentru vremea curentă */
+  .current-weather {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  /* Grafic adaptabil */
+  #weatherChart {
+    height: 250px;
+  }
+}
